@@ -16,7 +16,7 @@ namespace PowerTest
 
         private Dictionary<string, bool> showDetails = new Dictionary<string, bool>();
 
-        [MenuItem("MyTest/Run Tests")]
+        [MenuItem("PowerTest/Run Tests")]
         public static void ShowWindow()
         {
             GetWindow<TestRunnerWindow>("Test Runner");
