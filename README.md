@@ -4,6 +4,12 @@
 
 PowerTest is a lightweight testing system developed as an alternative to Unity's TestRunner (nunit). Despite its rapid implementation, PowerTest offers effective testing tools that can enhance your development process. The system is focused on speed and ease of use, especially when working with asynchronous code and dynamically loaded assets.
 
+
+
+https://github.com/SenatorInPower/PowerTest/assets/66920423/8847b9cf-0c97-48d0-b74b-43d4a531f4fc
+
+
+
 ### Advantages and Disadvantages Compared to TestRunner
 
 Advantages:
