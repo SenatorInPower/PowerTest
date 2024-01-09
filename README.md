@@ -6,8 +6,7 @@ PowerTest is a lightweight testing system developed as an alternative to Unity's
 
 ### Advantages and Disadvantages Compared to TestRunner
 
-Advantages
-
+Advantages:
     ➕ Performance: Tests do not generate analytics, significantly speeding up their execution.
     ➕ Asynchronous Support: Full support for asynchronous code and dynamic asset loading.
     ➕ Breakpoints: Ability to use breakpoints in the development environment to track test results.
@@ -19,7 +18,6 @@ Advantages
     ➕ Detailed Log: The log includes the time taken, error information, and test results.
 
 Disadvantages
-
     ➖ Output Structure: The test result output may not be sufficiently structured.
     ➖ Lack of Navigation: No ability to navigate through tests.
     ➖ Editor Mode Limitations: Inability to perform tests in the editor mode.
@@ -39,24 +37,24 @@ In case of adding the Zenject and UniTask directives, you will have access to ex
 
 To install PowerTest, follow these steps:
 
-    🔗 Cloning the Repository
+ 🔗 Cloning the Repository
 
-    🚀 To get started, clone the PowerTest repository using the following command:
+   To get started, clone the PowerTest repository using the following command:
 
-    git clone https://github.com/SenatorInPower/PowerTest.git
+   git clone https://github.com/SenatorInPower/PowerTest.git
 
 🎮 Opening the Project in Unity
 
-    Launch Unity Hub 🌐.
-    Click on the 'Add' button ➕.
-    Navigate to and select the cloned project folder 📁.
+Launch Unity Hub 🌐.
+Click on the 'Add' button ➕.
+Navigate to and select the cloned project folder 📁.
 
    ⚙️ Installing Dependencies
 
 Important: If you're using Zenject and UniTask in your project, follow these steps to ensure they are properly installed and configured:
 
-    Confirm that Zenject and UniTask are installed in your Unity project ✅.
-    Follow the specific installation and configuration instructions provided for these dependencies 📘.
+  Confirm that Zenject and UniTask are installed in your Unity project ✅.
+  Follow the specific installation and configuration instructions provided for these dependencies 📘.
 
 Now, PowerTest is ready for use in your Unity project. You can begin writing and running tests using the PowerTest framework.
 
@@ -66,51 +64,47 @@ Now, PowerTest is ready for use in your Unity project. You can begin writing and
 
 🎮 Access PowerTest:
 
-    In the Unity Editor: Click on PowerTest in the top menu bar.
+  In the Unity Editor: Click on PowerTest in the top menu bar.
 
 🚀 Start Game:
 
-    Pre-Written Tests: If your tests are already written (see examples in the Example folder), click on StartGame. This is necessary to prepare the environment for running the tests.
+ Pre-Written Tests: If your tests are already written (see examples in the Example folder), click on StartGame. This is necessary to prepare the environment for running the tests.
 
 ▶️ Run Tests During Play Mode:
 
-    Play Mode: Once in Play mode, you will see the RunTest button.
-    Test Execution: Click this button to start the execution of the tests.
+ Play Mode: Once in Play mode, you will see the RunTest button.
+ Test Execution: Click this button to start the execution of the tests.
 
 🔍 Observing Test Execution:
 
-    Execution Delay: Initially, you may notice a delay of about 6 seconds as the tests are executed. This is normal as the tests will complete after all of them have run. Note: In the example, there is an asynchronous delay of 5 seconds.
+ Execution Delay: Initially, you may notice a delay of about 6 seconds as the tests are executed. This is normal as the tests will complete after all of them have run. Note: In the example, there is an asynchronous delay of 5 seconds.
 
 🛠️ Using Zenject and UniTask:
 
-    Dependencies: If you wish to use Zenject or UniTask in your tests, ensure to add the respective directives in your test scripts.
-    Zenject Example: Refer to the provided example for Zenject injection, which is conducted locally through the setup process.
+ Dependencies: If you wish to use Zenject or UniTask in your tests, ensure to add the respective directives in your test scripts.
+ Zenject Example: Refer to the provided example for Zenject injection, which is conducted locally through the setup process.
 
 
 ### Writing Tests
 
 ## When writing tests with PowerTest, you can use the following attributes to structure your test cases:
 
- PowerTestSetup:
+[PowerTestSetup]:
 
-    🔹 Initialization Attribute: This attribute marks methods that are executed at the beginning, typically used for initialization.
+ 🔹 Initialization Attribute: This attribute marks methods that are executed at the beginning, typically used for initialization.
+     Validation: These methods can also fail and utilize asserts for validation.
 
-        Validation: These methods can also fail and utilize asserts for validation.
+[PowerTest]:
 
-PowerTest:
+  🔹 Main Test Method Attribute: Use this attribute to denote your main test methods.
+     Core Validation: These are the core tests that will validate the functionality of your code.
 
-    🔹 Main Test Method Attribute: Use this attribute to denote your main test methods.
+[PowerIsolatedTest]:
 
-        Core Validation: These are the core tests that will validate the functionality of your code.
+🔹 Isolation Attribute: Methods with this attribute will have all references in the class reset.
+ Ensuring Isolation: Initialization done in these methods will not be taken into account in other tests, ensuring isolation.
 
-PowerIsolatedTest:
+[PowerTestTearDown]:
 
-    🔹 Isolation Attribute: Methods with this attribute will have all references in the class reset.
-
-        Ensuring Isolation: Initialization done in these methods will not be taken into account in other tests, ensuring isolation.
-
-PowerTestTearDown:
-
-    🔹 Finalizing Attribute: This attribute is for finalizing methods that run at the end of your test cycle.
-
-        Cleanup: Typically used for cleanup and releasing resources.
+🔹 Finalizing Attribute: This attribute is for finalizing methods that run at the end of your test cycle.
+   Cleanup: Typically used for cleanup and releasing resources.
