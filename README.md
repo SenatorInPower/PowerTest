@@ -7,6 +7,7 @@ PowerTest is a lightweight testing system developed as an alternative to Unity's
 ### Advantages and Disadvantages Compared to TestRunner
 
 Advantages:
+
     ➕ Performance: Tests do not generate analytics, significantly speeding up their execution.
     ➕ Asynchronous Support: Full support for asynchronous code and dynamic asset loading.
     ➕ Breakpoints: Ability to use breakpoints in the development environment to track test results.
@@ -18,6 +19,7 @@ Advantages:
     ➕ Detailed Log: The log includes the time taken, error information, and test results.
 
 Disadvantages
+
     ➖ Output Structure: The test result output may not be sufficiently structured.
     ➖ Lack of Navigation: No ability to navigate through tests.
     ➖ Editor Mode Limitations: Inability to perform tests in the editor mode.
