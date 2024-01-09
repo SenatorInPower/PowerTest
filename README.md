@@ -47,22 +47,22 @@ To install PowerTest, follow these steps:
 
 🎮 Opening the Project in Unity
 
-Launch Unity Hub 🌐.
-Click on the 'Add' button ➕.
-Navigate to and select the cloned project folder 📁.
+    Launch Unity Hub 🌐.
+    Click on the 'Add' button ➕.
+    Navigate to and select the cloned project folder 📁.
 
    ⚙️ Installing Dependencies
 
 Important: If you're using Zenject and UniTask in your project, follow these steps to ensure they are properly installed and configured:
 
-  Confirm that Zenject and UniTask are installed in your Unity project ✅.
-  Follow the specific installation and configuration instructions provided for these dependencies 📘.
+    Confirm that Zenject and UniTask are installed in your Unity project ✅.
+    Follow the specific installation and configuration instructions provided for these dependencies 📘.
 
 Now, PowerTest is ready for use in your Unity project. You can begin writing and running tests using the PowerTest framework.
 
-### Usage
+## Usage
 
-## To use PowerTest in your Unity project, follow these instructions:
+### To use PowerTest in your Unity project, follow these instructions:
 
 🎮 Access PowerTest:
 
@@ -87,9 +87,9 @@ Now, PowerTest is ready for use in your Unity project. You can begin writing and
  Zenject Example: Refer to the provided example for Zenject injection, which is conducted locally through the setup process.
 
 
-### Writing Tests
+## Writing Tests
 
-## When writing tests with PowerTest, you can use the following attributes to structure your test cases:
+### When writing tests with PowerTest, you can use the following attributes to structure your test cases:
 
 [PowerTestSetup]:
 
