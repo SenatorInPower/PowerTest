@@ -16,18 +16,34 @@ namespace PowerTest
 
         private Dictionary<string, bool> showDetails = new Dictionary<string, bool>();
 
-        [MenuItem("PowerTest/Run Tests")]
+        [MenuItem("Power Test/Run Tests")]
         public static void ShowWindow()
         {
-            GetWindow<TestRunnerWindow>("Test Runner");
+            GetWindow<TestRunnerWindow>("Power Test");
         }
 
         void OnEnable()
         {
             passIcon = Resources.Load<Texture2D>("passIcon");
             failIcon = Resources.Load<Texture2D>("failIcon");
+
+            EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
+        }
+        void OnDisable()
+        {
+            // Отписываемся от события при выключении окна
+            EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
         }
 
+        // Обработчик изменения состояния Play Mode
+        private void OnPlayModeStateChanged(PlayModeStateChange state)
+        {
+            if (state == PlayModeStateChange.ExitingPlayMode)
+            {
+                isGameRunning = false;
+                Repaint();
+            }
+        }
         private void ClearTestResults()
         {
             testResults.Clear();
