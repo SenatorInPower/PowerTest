@@ -1,6 +1,8 @@
-<img src="https://github.com/SenatorInPower/PowerTest/assets/66920423/6bce5a7f-bbf4-407b-9ec1-4d7a82f7b5bc" width="200" height="200">
+<p align="center">
+  <img src="https://github.com/SenatorInPower/PowerTest/assets/66920423/6bce5a7f-bbf4-407b-9ec1-4d7a82f7b5bc" width="200" height="200">
+</p>
 
-# Power Test
+<h1 align="center">Power Test</h1>
 
 ## Description
 
